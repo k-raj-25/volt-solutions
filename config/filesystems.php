@@ -28,9 +28,6 @@ return [
     |
     */
 
-    // Disk used for blog cover images. Set UPLOADS_DISK=s3 in production (Render's disk is wiped on deploy).
-    'uploads_disk' => env('UPLOADS_DISK', 'public'),
-
     'disks' => [
 
         'local' => [

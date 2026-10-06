@@ -51,7 +51,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         if ($post->cover_image) {
-            Storage::disk(config('filesystems.uploads_disk'))->delete($post->cover_image);
+            Storage::disk('public')->delete($post->cover_image);
         }
         $post->delete();
 
@@ -89,11 +89,11 @@ class PostController extends Controller
         unset($data['cover_image']);
         if ($request->hasFile('cover_image')) {
             if ($post?->cover_image) {
-                Storage::disk(config('filesystems.uploads_disk'))->delete($post->cover_image);
+                Storage::disk('public')->delete($post->cover_image);
             }
-            $data['cover_image'] = $request->file('cover_image')->store('posts', config('filesystems.uploads_disk'));
+            $data['cover_image'] = $request->file('cover_image')->store('posts', 'public');
         } elseif ($request->boolean('remove_cover') && $post?->cover_image) {
-            Storage::disk(config('filesystems.uploads_disk'))->delete($post->cover_image);
+            Storage::disk('public')->delete($post->cover_image);
             $data['cover_image'] = null;
         }
 

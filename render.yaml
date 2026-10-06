@@ -4,37 +4,25 @@ services:
     runtime: docker
     plan: free
     healthCheckPath: /up
+    # Free plan: SQLite and uploaded images live on the container disk and are
+    # wiped on every deploy/restart. To keep them, switch to a paid plan and add:
+    #   disk: { name: data, mountPath: /var/data, sizeGB: 1 }
+    # and set DATA_DIR=/var/data
     envVars:
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
         value: "false"
       - key: APP_KEY
-        generateValue: true   # NOTE: Laravel needs "base64:..." – see DEPLOY.md, set APP_KEY manually
+        sync: false
       - key: APP_URL
         sync: false
       - key: DB_CONNECTION
-        value: pgsql
-      - key: DB_URL
-        sync: false
+        value: sqlite
       - key: SESSION_DRIVER
         value: database
       - key: CACHE_STORE
         value: database
-      - key: UPLOADS_DISK
-        value: s3
-      - key: AWS_ACCESS_KEY_ID
-        sync: false
-      - key: AWS_SECRET_ACCESS_KEY
-        sync: false
-      - key: AWS_DEFAULT_REGION
-        value: auto
-      - key: AWS_BUCKET
-        sync: false
-      - key: AWS_ENDPOINT
-        sync: false
-      - key: AWS_URL
-        sync: false
       - key: ADMIN_EMAIL
         sync: false
       - key: ADMIN_PASSWORD

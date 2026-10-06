@@ -1,47 +1,28 @@
-# Deploying to Render (free)
+# Deploying to Render
 
-Render's free web service has a wiped disk on every deploy and sleeps when idle, so the
-database and blog images live outside it:
+The app uses SQLite and stores blog images in `storage/app/public` (served via `/storage`).
 
-- **Database:** free Postgres at https://neon.tech (Render's own free Postgres expires after ~30 days).
-- **Blog images:** free Cloudflare R2 bucket (S3-compatible) at https://dash.cloudflare.com → R2.
-
-## 1. Database (Neon)
-Create a project, copy the **connection string** (`postgresql://user:pass@host/db?sslmode=require`). This is `DB_URL`.
-
-## 2. Image storage (Cloudflare R2)
-1. Create a bucket (e.g. `volt-uploads`) and enable **Public access** (the `r2.dev` URL) so the site can show images.
-2. R2 → Manage API tokens → create a token with **Object Read & Write** → note Access Key ID and Secret.
-3. Values you need:
-   - `AWS_BUCKET` = bucket name
-   - `AWS_ENDPOINT` = `https://<account-id>.r2.cloudflarestorage.com`
-   - `AWS_URL` = the public `https://pub-xxxx.r2.dev` URL
-   - `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
-   - also set `AWS_USE_PATH_STYLE_ENDPOINT=true`
-
-## 3. Push the code to GitHub
-This folder is not a git repo yet:
-```
-git init && git add . && git commit -m "Volt Solutions website"
-```
-Create an empty GitHub repo and push to it. (`.env` is ignored, so no secrets are uploaded.)
-
-## 4. Render
-New → **Blueprint** → pick the repo (it reads `render.yaml`), or New → Web Service → Docker.
-Fill in the environment variables it asks for:
+## Steps
+1. Render → New → **Blueprint** → select this GitHub repo (reads `render.yaml`).
+2. Set the variables it asks for:
 
 | Variable | Value |
 |---|---|
 | `APP_KEY` | run `php artisan key:generate --show` locally and paste the `base64:...` value |
 | `APP_URL` | your `https://<name>.onrender.com` URL |
-| `DB_URL` | Neon connection string |
-| `UPLOADS_DISK` | `s3` |
-| `AWS_*` | R2 values from step 2 |
-| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | the first admin login (change the password after login) |
+| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | first admin login (change the password after login) |
 
-On start the container runs migrations and seeds the admin (and 3 sample posts the first time only).
+On start the container creates the SQLite file, runs migrations and seeds the admin (plus 3 sample posts the first time only).
 Admin: `https://<name>.onrender.com/admin`.
 
+## Important: free plan does not keep data
+Render's free web service has an ephemeral disk. Every redeploy or restart (including waking after
+idle) resets the SQLite database and uploaded images, so blog posts, messages and any password change are lost.
+
+To keep them, use a paid plan (Starter) with a persistent disk:
+- Add a disk mounted at `/var/data` (Render dashboard → Disks, or the `disk:` block noted in `render.yaml`).
+- Set `DATA_DIR=/var/data`. The SQLite file and uploads are then stored on that disk.
+
 ## Notes
-- First visit after idle takes ~30–60 s (free tier waking up).
-- To use a custom domain, add it in Render → Settings → Custom Domains and update `APP_URL`.
+- First visit after idle takes ~30–60 s on the free plan.
+- Custom domain: Render → Settings → Custom Domains, then update `APP_URL`.

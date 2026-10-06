@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class Post extends Model
@@ -49,7 +48,7 @@ class Post extends Model
 
     public function getCoverUrlAttribute(): ?string
     {
-        return $this->cover_image ? Storage::disk(config('filesystems.uploads_disk'))->url($this->cover_image) : null;
+        return $this->cover_image ? asset('storage/'.$this->cover_image) : null;
     }
 
     public function getDisplayCoverAttribute(): string
