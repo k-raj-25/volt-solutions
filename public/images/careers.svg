@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-label="A friendly team working together">
+  <rect width="560" height="420" rx="28" fill="#fbf6ea"/>
+  <circle cx="460" cy="80" r="90" fill="#f3e7c8" opacity=".7"/>
+  <rect x="40" y="320" width="480" height="16" rx="8" fill="#1e3f70"/>
+  <!-- person 1 -->
+  <circle cx="150" cy="170" r="38" fill="#f1d3b3"/>
+  <path d="M112 166 C112 130 188 130 188 166 C170 150 130 150 112 166 Z" fill="#17325a"/>
+  <path d="M80 320 C80 240 100 216 150 216 C200 216 220 240 220 320 Z" fill="#1e3f70"/>
+  <!-- person 2 -->
+  <circle cx="280" cy="140" r="42" fill="#e3b88f"/>
+  <path d="M238 136 C240 96 322 96 322 136 C300 118 260 118 238 136 Z" fill="#4a3426"/>
+  <path d="M200 320 C200 220 230 190 280 190 C330 190 360 220 360 320 Z" fill="#c9a65b"/>
+  <path d="M265 190 L280 220 L295 190 Z" fill="#fff"/>
+  <!-- person 3 -->
+  <circle cx="410" cy="170" r="38" fill="#f1d3b3"/>
+  <path d="M370 176 C366 120 454 120 450 176 C440 150 390 150 370 176 Z" fill="#6b4a2f"/>
+  <path d="M340 320 C340 240 360 216 410 216 C460 216 480 240 480 320 Z" fill="#2b6a4b"/>
+  <!-- chart board -->
+  <g transform="translate(38 70)"><rect width="110" height="70" rx="8" fill="#fff" stroke="#1e3f70" stroke-width="4"/>
+    <rect x="16" y="38" width="14" height="22" fill="#c9a65b"/><rect x="40" y="26" width="14" height="34" fill="#c9a65b"/><rect x="64" y="14" width="14" height="46" fill="#c9a65b"/></g>
+  <circle cx="280" cy="52" r="0" fill="none"/>
+</svg>

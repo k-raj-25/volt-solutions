@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-label="Fortress shield protecting growth">
+  <rect width="560" height="420" rx="28" fill="#eef2f8"/>
+  <circle cx="280" cy="210" r="170" fill="#fff"/>
+  <!-- fortress wall -->
+  <g fill="#1e3f70">
+    <rect x="90" y="270" width="380" height="80" rx="4"/>
+    <rect x="90" y="248" width="40" height="30"/><rect x="150" y="248" width="40" height="30"/><rect x="210" y="248" width="40" height="30"/>
+    <rect x="310" y="248" width="40" height="30"/><rect x="370" y="248" width="40" height="30"/><rect x="430" y="248" width="40" height="30"/>
+  </g>
+  <path d="M250 350 V310 a30 30 0 0 1 60 0 V350 Z" fill="#fbf6ea"/>
+  <!-- shield -->
+  <path d="M280 60 L360 90 V170 C360 222 326 252 280 268 C234 252 200 222 200 170 V90 Z" fill="#c9a65b" stroke="#b08d3f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M280 76 L346 100 V168 C346 212 318 236 280 250 Z" fill="#1e3f70"/>
+  <!-- plant -->
+  <path d="M280 210 V150" stroke="#9ccfb0" stroke-width="5" stroke-linecap="round"/>
+  <path d="M280 170 C256 170 246 150 246 138 C268 138 280 152 280 170 Z" fill="#2b6a4b"/>
+  <path d="M280 156 C304 156 314 136 314 124 C292 124 280 138 280 156 Z" fill="#9ccfb0"/>
+  <!-- arrow -->
+  <path d="M110 200 L170 150 L200 170 L250 110" fill="none" stroke="#2b6a4b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".0"/>
+  <g fill="#c9a65b"><circle cx="105" cy="120" r="9"/><circle cx="460" cy="140" r="12"/><circle cx="440" cy="80" r="6"/></g>
+</svg>
