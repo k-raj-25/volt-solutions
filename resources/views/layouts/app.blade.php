@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', config('site.name').' – '.config('site.tagline'))</title>
-    <meta name="description" content="@yield('description', 'Volt Solutions offers trusted financial loans and real estate services under one roof. Your financial fortress.')">
+    <meta name="description" content="@yield('description', 'Volt Solutions offers bridge funding, instant unsecured funding and secured private funding for businesses, plus real estate services, from Gurugram.')">
     <meta property="og:title" content="@yield('title', config('site.name'))">
-    <meta property="og:description" content="@yield('description', 'Trusted financial loans and real estate services.')">
+    <meta property="og:description" content="@yield('description', 'Business funding and real estate services in Gurugram.')">
     <meta property="og:image" content="@yield('og_image', asset('images/logo.png'))">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta name="theme-color" content="#f6f3ec">
@@ -50,7 +50,7 @@
         <div class="footer-grid">
             <div>
                 <a class="footer-logo" href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Volt Solutions"></a>
-                <p>Trusted financial loans and real estate guidance, built on transparency and long-term relationships.</p>
+                <p>Business funding and real estate guidance from Gurugram, built on transparency and long-term relationships.</p>
             </div>
             <div>
                 <h4>Company</h4>
@@ -64,7 +64,7 @@
             <div>
                 <h4>What We Do</h4>
                 <ul>
-                    <li><a href="{{ route('loans') }}">Financial Loans</a></li>
+                    <li><a href="{{ route('loans') }}">Business Funding</a></li>
                     <li><a href="{{ route('real-estate') }}">Real Estate</a></li>
                     <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
                     <li><a href="{{ route('terms') }}">Terms &amp; Conditions</a></li>
@@ -75,15 +75,15 @@
                 <h4>Get in Touch</h4>
                 <ul>
                     <li>{{ config('site.address') }}</li>
-                    <li><a href="tel:{{ preg_replace('/\s+/', '', config('site.phone')) }}">{{ config('site.phone') }}</a></li>
+                    @if (config('site.phone'))<li><a href="tel:{{ preg_replace('/\s+/', '', config('site.phone')) }}">{{ config('site.phone') }}</a></li>@endif
                     <li><a href="mailto:{{ config('site.email') }}">{{ config('site.email') }}</a></li>
                 </ul>
             </div>
         </div>
-        <p class="disclaimer">Loan approvals are subject to eligibility, documentation and the lender's credit assessment. Interest rates and terms may vary. Property information is indicative and should be independently verified before any transaction.</p>
+        <p class="disclaimer">Funding is subject to eligibility, documentation and credit assessment. Rates, fees and terms may vary. Property information is indicative and should be independently verified before any transaction.</p>
         <div class="footer-bottom">
             <span>&copy; {{ date('Y') }} {{ config('site.name') }}. All rights reserved.</span>
-            <span>{{ config('site.tagline') }}</span>
+            <span>Developed By <a href="https://www.linkedin.com/in/kr25">Kamal Rajput</a></span>
         </div>
     </div>
 </footer>

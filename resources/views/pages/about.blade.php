@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('title', 'About Us – Volt Solutions')
-@section('description', 'Learn about Volt Solutions: our story, mission and the values behind our loan and real estate services.')
+@section('description', 'Learn about Volt Solutions: our story, mission and the values behind our funding and real estate services.')
 
 @section('content')
 @include('partials.page-hero', [
     'crumb' => 'About',
     'title' => 'About <em>us.</em>',
-    'lead' => 'We help individuals, families and businesses secure funding and find property with confidence.',
-    'facts' => [['Focus', 'Loans and real estate'], ['Approach', 'Transparent and personal'], ['Promise', 'Your financial fortress']],
+    'lead' => 'We help businesses secure fast, clear funding and help families find property with confidence.',
+    'facts' => [['Focus', 'Business funding and real estate'], ['Approach', 'Transparent and personal'], ['Promise', 'Your financial fortress']],
     'image' => 'city',
     'alt' => 'Aerial view of a busy city',
     'tag' => 'One team, two services',
@@ -19,11 +19,11 @@
         <div>
             <span class="eyebrow">Our Story</span>
             <h2>Built to be your financial fortress</h2>
-            <p>Volt Solutions began with a simple belief: financial decisions should feel safe, not stressful. We saw that people often needed both a loan and a property advisor, and had to deal with separate parties for each.</p>
-            <p>So we brought both together. Today we offer financial loans and real estate services under one roof, with a team that takes the time to understand your situation.</p>
+            <p>Volt Solutions began with a simple belief: financial decisions should feel safe, not stressful. We saw that business owners often needed both quick funding and a property advisor, and had to deal with separate parties for each.</p>
+            <p>So we brought both together. Today we offer business funding and real estate services under one roof, with a team that takes the time to understand your situation.</p>
             <ul class="checklist">
                 <li>Clear, honest advice with no hidden charges</li>
-                <li>One team for both financing and property</li>
+                <li>One team for both funding and property</li>
                 <li>Support from first enquiry to after-sales</li>
             </ul>
         </div>

@@ -19,13 +19,13 @@
 
         <h2>2. How we use your information</h2>
         <ul>
-            <li>To respond to your enquiries about loans or real estate</li>
+            <li>To respond to your enquiries about business funding or real estate</li>
             <li>To provide and improve our services</li>
             <li>To meet legal and regulatory obligations</li>
         </ul>
 
         <h2>3. Sharing of information</h2>
-        <p>We do not sell your personal information. We may share it with lending partners, property owners or service providers only as needed to deal with your request, or where required by law.</p>
+        <p>We do not sell your personal information. We may share it with funding partners, property owners or service providers only as needed to deal with your request, or where required by law.</p>
 
         <h2>4. Data security</h2>
         <p>We take reasonable measures to protect your information. However, no method of transmission over the internet is completely secure.</p>

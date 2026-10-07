@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Us – Volt Solutions')
-@section('description', 'Contact Volt Solutions for loan or real estate enquiries. Call, email or send us a message.')
+@section('description', 'Contact Volt Solutions at IFC Tower, Sector 66, Gurugram for business funding or real estate enquiries.')
 
 @section('content')
 <section class="contact-page">
@@ -9,14 +9,16 @@
         <div class="contact-intro">
             <div class="breadcrumb"><a href="{{ route('home') }}">Home</a> / Contact</div>
             <h1>Say <em>hello.</em></h1>
-            <p class="lead">Loan question? Looking for a property? Drop us a line and a real person will reply within one working day.</p>
+            <p class="lead">Need business funding? Looking for a property? Drop us a line and a real person will reply within one working day.</p>
 
             <div class="contact-lines">
+                @if (config('site.phone'))
                 <a href="tel:{{ preg_replace('/\s+/', '', config('site.phone')) }}">
                     <small>Call</small>
                     <span>{{ config('site.phone') }}</span>
                     <i aria-hidden="true">↗</i>
                 </a>
+                @endif
                 <a href="mailto:{{ config('site.email') }}">
                     <small>Email</small>
                     <span>{{ config('site.email') }}</span>
@@ -47,9 +49,9 @@
                     <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
                     <div class="interest-pick">
                         <span>I'm interested in</span>
-                        @foreach (['Loans', 'Real Estate', 'Other'] as $opt)
+                        @foreach (['Funding', 'Real Estate', 'Other'] as $opt)
                             <label>
-                                <input type="radio" name="interest" value="{{ $opt }}" @checked(old('interest', request('interest', 'Loans')) === $opt)>
+                                <input type="radio" name="interest" value="{{ $opt }}" @checked(old('interest', request('interest', 'Funding')) === $opt)>
                                 <b>{{ $opt }}</b>
                             </label>
                         @endforeach

@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Blog – Loans, Real Estate & Finance Tips | Volt Solutions')
-@section('description', 'Articles and guides on loans, real estate and personal finance from the Volt Solutions team.')
+@section('title', 'Blog – Business Funding, Real Estate & Finance Tips | Volt Solutions')
+@section('description', 'Articles and guides on business funding, real estate and finance from the Volt Solutions team.')
 
 @section('content')
 @include('partials.page-hero', [
     'crumb' => 'Blog',
     'title' => 'The <em>blog.</em>',
-    'lead' => 'Insights, guides and news on loans, property and personal finance.',
+    'lead' => 'Insights, guides and news on business funding, property and finance.',
 ])
 
 <section class="section">

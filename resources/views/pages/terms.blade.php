@@ -17,14 +17,14 @@
         <h2>1. Use of the website</h2>
         <p>The content on this site is for general information only. You agree to use the website lawfully and not to misuse or disrupt it.</p>
 
-        <h2>2. Loans</h2>
-        <p>Information about loans on this site is indicative and does not constitute an offer. Loan approval, interest rates, fees and terms depend on eligibility, documentation and the credit assessment of the lending partner.</p>
+        <h2>2. Business funding</h2>
+        <p>Information about funding products on this site is indicative and does not constitute an offer. Approval, pricing, fees and terms depend on eligibility, documentation and the credit assessment of the funding partner.</p>
 
         <h2>3. Real estate</h2>
         <p>Property details, prices and availability may change without notice. Visitors should independently verify property documents, title and approvals before any transaction.</p>
 
-        <h2>4. Calculators</h2>
-        <p>The EMI calculator provides estimates only. Actual instalments may differ.</p>
+        <h2>4. Eligibility</h2>
+        <p>Turnover requirements shown on this site are minimum criteria only. Meeting them does not guarantee approval.</p>
 
         <h2>5. Intellectual property</h2>
         <p>All content, logos and design on this website belong to Volt Solutions and may not be copied or reused without permission.</p>
