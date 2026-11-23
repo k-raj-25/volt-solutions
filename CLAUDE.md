@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing site for Volt Solutions (financial loans + real estate) with a blog managed from a small admin panel. Laravel 13 / PHP 8.4, SQLite, Blade templates, hand-written CSS and vanilla JS. There is no front-end build step for the site itself: `public/css/site.css` and `public/js/site.js` are served as-is (the stock Vite/`package.json` setup is unused by the views).
+Marketing site for Volt Solutions (business loans and home loans; real estate services were removed in Nov 2026) with a blog managed from a small admin panel. Laravel 13 / PHP 8.4, SQLite, Blade templates, hand-written CSS and vanilla JS. There is no front-end build step for the site itself: `public/css/site.css` and `public/js/site.js` are served as-is (the stock Vite/`package.json` setup is unused by the views).
 
 ## Commands
 
@@ -24,7 +24,7 @@ GD is not installed locally, so tests must not use `UploadedFile::fake()->image(
 
 ## Architecture
 
-- **Routes** (`routes/web.php`): static pages go through `PageController`; `BlogController` (`/blog`, `/blog/{slug}`), `ContactController` (`/contact`, honeypot field `website` + throttle), `SitemapController` (`/sitemap.xml`), and an `admin.*` group under `Admin\{Auth,Dashboard,Post,Message}Controller`. `/services` was removed and 301-redirects to `/` (its content lives on the home page). `bootstrap/app.php` sets guest redirect to `admin.login` and authenticated redirect to `admin.dashboard`.
+- **Routes** (`routes/web.php`): static pages go through `PageController`; `BlogController` (`/blog`, `/blog/{slug}`), `ContactController` (`/contact`, honeypot field `website` + throttle), `SitemapController` (`/sitemap.xml`), and an `admin.*` group under `Admin\{Auth,Dashboard,Post,Message}Controller`. `/services` and `/real-estate` were removed and 301-redirect to `/`. `bootstrap/app.php` sets guest redirect to `admin.login` and authenticated redirect to `admin.dashboard`.
 - **Blog**: `Post` model holds the logic. `Post::published()` (status = published AND `published_at <= now()`) must be used for every public query so drafts and scheduled posts stay hidden. Categories are the `Post::CATEGORIES` constant (`loans`, `real-estate`, `finance-tips`, `company-news`). Accessors: `category_label`, `reading_time`, `tag_list`, `cover_url`, `display_cover` (falls back to a per-category stock photo when no cover uploaded), `summary`.
 - **Sanitising**: post bodies are written in Quill (CDN, admin only) and cleaned with `mews/purifier` before saving/rendering. Cover uploads: jpg/jpeg/png/webp, max 4 MB.
 - **Site details** (phone, email, address, hours, currency `₹`) live in `config/site.php` and are read by views via `config('site.*')`. Values are still placeholders.
