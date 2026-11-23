@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Volt Solutions – Business Funding & Real Estate, Gurugram | Your Financial Fortress')
-@section('description', 'Bridge, instant and secured funding for business loans and home loans, Pan India, with no CIBIL score needed. Plus real estate services from Volt Solutions, Gurugram.')
+@section('title', 'Volt Solutions – Business Loans & Home Loans, Pan India | Your Financial Fortress')
+@section('description', 'Bridge, instant and secured funding for business loans and home loans, Pan India, with no CIBIL score needed. From Volt Solutions, Gurugram.')
 
 @section('content')
 <section class="hero">
@@ -9,10 +9,10 @@
         <div class="hero-top">
             <h1>Business funding, <em>done fast.</em></h1>
             <div>
-                <p class="lead">Bridge, instant and secured funding for business and home loans, Pan India, with no CIBIL score needed. Plus real estate advice, from one team in Gurugram.</p>
+                <p class="lead">Bridge, instant and secured funding for business and home loans, Pan India, with no CIBIL score needed. From one team in Gurugram.</p>
                 <div class="actions">
                     <a href="{{ route('loans') }}" class="btn btn-primary">Explore funding</a>
-                    <a href="{{ route('real-estate') }}" class="btn btn-outline">View real estate</a>
+                    <a href="{{ route('contact') }}" class="btn btn-outline">Talk to us</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
     <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
             @for ($i = 0; $i < 2; $i++)
-                <span>Bridge funding</span><span>Instant funding</span><span>Secured funding</span><span>No CIBIL score needed</span><span>Pan India</span><span>Business loans</span><span>Home loans</span><span>Buy property</span><span>Sell property</span><span>Rentals</span><span>Commercial space</span>
+                <span>Bridge funding</span><span>Instant funding</span><span>Secured funding</span><span>No CIBIL score needed</span><span>Pan India</span><span>Business loans</span><span>Home loans</span>
             @endfor
         </div>
     </div>
@@ -38,22 +38,22 @@
     <div class="container">
         <div class="section-head">
             <span class="eyebrow">What we do</span>
-            <h2>Two services. One trusted partner.</h2>
+            <h2>Business loans and home loans.</h2>
         </div>
         <div class="bento">
             <article class="tile tile-a">
                 <img src="{{ asset('images/photos/coins.jpg') }}" alt="Stacks of coins showing financial growth" loading="lazy">
-                <span class="pill">Business funding</span>
+                <span class="pill">Business loans</span>
                 <h3>Funding that fits your plans.</h3>
-                <p>Bridge, instant and secured funding for business and home loans, Pan India, with no CIBIL score needed.</p>
+                <p>Bridge, instant and secured funding for your business, Pan India, with no CIBIL score needed.</p>
                 <a class="btn" href="{{ route('loans') }}">Explore funding</a>
             </article>
             <article class="tile tile-b">
                 <img src="{{ asset('images/photos/keys.jpg') }}" alt="Handing over the keys to a new home" loading="lazy">
-                <span class="pill">Real estate</span>
-                <h3>Find the place. Own the moment.</h3>
-                <p>Buy, sell or rent with verified listings and honest advice.</p>
-                <a class="btn" href="{{ route('real-estate') }}">View properties</a>
+                <span class="pill">Home loans</span>
+                <h3>Get the keys sooner.</h3>
+                <p>Funding for your home, with clear terms and no CIBIL score needed.</p>
+                <a class="btn" href="{{ route('loans') }}">Explore home loans</a>
             </article>
         </div>
     </div>
@@ -75,37 +75,20 @@
     </div>
 </section>
 
-<section class="section">
-    <div class="container">
-        <div class="section-head">
-            <span class="eyebrow">Our services · Real estate</span>
-            <h2>Find, sell or rent with confidence</h2>
-        </div>
-        <div class="grid-3">
-            <div class="card"><div class="icon green"><x-icon name="home" /></div><h3>Buy Property</h3><p>Residential plots, apartments and houses matched to your budget.</p></div>
-            <div class="card"><div class="icon green"><x-icon name="chart" /></div><h3>Sell Property</h3><p>Pricing guidance, marketing and buyer coordination.</p></div>
-            <div class="card"><div class="icon green"><x-icon name="key" /></div><h3>Rentals</h3><p>Residential and commercial rentals with verified owners and tenants.</p></div>
-            <div class="card"><div class="icon green"><x-icon name="building" /></div><h3>Commercial Space</h3><p>Shops, offices and warehouses for your business.</p></div>
-            <div class="card"><div class="icon green"><x-icon name="file" /></div><h3>Legal &amp; Documentation</h3><p>Title checks and paperwork support for a smooth transaction.</p></div>
-            <div class="card"><div class="icon green"><x-icon name="cash" /></div><h3>Property Financing</h3><p>Pair your purchase with the right funding from our funding desk.</p></div>
-        </div>
-        <p style="margin-top:36px"><a class="btn btn-green" href="{{ route('real-estate') }}">Explore real estate</a></p>
-    </div></section>
-
 <section class="section soft">
     <div class="container split">
         <div class="photo-stack">
             <img class="photo" src="{{ asset('images/photos/houses.jpg') }}" alt="Modern apartment buildings in warm sunlight" loading="lazy">
-            <div class="photo-badge"><strong>Funding + Property</strong><span>One trusted team</span></div>
+            <div class="photo-badge"><strong>No CIBIL score needed</strong><span>Pan India</span></div>
         </div>
         <div>
             <span class="eyebrow">Your partner</span>
-            <h2>Finance the dream. Find the place.</h2>
-            <p class="lead">Most people deal with a lender in one place and a property agent in another. With us, one team handles both so nothing gets lost in between.</p>
+            <h2>Funding with a real person beside you.</h2>
+            <p class="lead">One dedicated advisor takes you from first call to disbursal, for business loans and home loans alike.</p>
             <ul class="checklist">
-                <li>Funding eligibility checked before you shortlist properties</li>
-                <li>Verified listings and documentation support</li>
-                <li>One point of contact from enquiry to handover</li>
+                <li>Eligibility checked quickly, with no CIBIL score needed</li>
+                <li>Help preparing your documents</li>
+                <li>One point of contact from enquiry to disbursal</li>
             </ul>
             <a class="btn btn-primary" href="{{ route('about') }}">More about us</a>
         </div>
@@ -135,9 +118,9 @@
         </div>
         <div class="steps">
             <div class="step"><h3>Tell us your goal</h3><p>Share what you need through a quick call or form.</p></div>
-            <div class="step"><h3>Get expert advice</h3><p>We recommend the best-fit funding or property options.</p></div>
+            <div class="step"><h3>Get expert advice</h3><p>We recommend the best-fit funding option.</p></div>
             <div class="step"><h3>Submit documents</h3><p>We help you prepare and verify everything.</p></div>
-            <div class="step"><h3>Move forward</h3><p>Funds disbursed or keys handed over, with support after.</p></div>
+            <div class="step"><h3>Move forward</h3><p>Funds disbursed, with support after.</p></div>
         </div>
     </div>
 </section>
@@ -163,7 +146,7 @@
     <div class="container">
         <div class="cta cta-photo" style="--cta-img:url('{{ asset('images/photos/city.jpg') }}')">
             <h2>Ready for the next step?</h2>
-            <p>Talk to our team today. We will help you find the right funding or the right property.</p>
+            <p>Talk to our team today. We will help you find the right funding.</p>
             <div class="actions">
                 <a class="btn btn-gold" href="{{ route('contact') }}">Contact us</a>
                 @if (config('site.phone'))<a class="btn btn-outline" href="tel:{{ preg_replace('/\s+/', '', config('site.phone')) }}">Call {{ config('site.phone') }}</a>@endif

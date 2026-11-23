@@ -18,7 +18,6 @@
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="{{ route('loans') }}">Loans</a></li>
-                <li><a href="{{ route('real-estate') }}">Real Estate</a></li>
                 <li><a href="{{ route('careers') }}">Careers</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
             </ul>

@@ -23,7 +23,7 @@ class SiteTest extends TestCase
 
     public function test_public_pages_load(): void
     {
-        foreach (['/', '/about', '/loans', '/real-estate', '/blog', '/contact', '/careers', '/privacy-policy', '/terms-and-conditions', '/sitemap', '/sitemap.xml'] as $url) {
+        foreach (['/', '/about', '/loans', '/blog', '/contact', '/careers', '/privacy-policy', '/terms-and-conditions', '/sitemap', '/sitemap.xml'] as $url) {
             $this->get($url)->assertOk();
         }
     }
@@ -36,6 +36,12 @@ class SiteTest extends TestCase
                 ->assertSee('No CIBIL score needed')->assertSee('Pan India')
                 ->assertSee('Business loans')->assertSee('Home loans');
         }
+    }
+
+    public function test_real_estate_is_removed(): void
+    {
+        $this->get('/real-estate')->assertRedirect('/')->assertStatus(301);
+        $this->get('/')->assertDontSee('Real Estate')->assertDontSee('real estate');
     }
 
     public function test_drafts_and_scheduled_posts_are_hidden(): void
@@ -86,7 +92,7 @@ class SiteTest extends TestCase
 
     public function test_contact_form_stores_message(): void
     {
-        $this->post('/contact', ['name' => 'Bob', 'email' => 'b@x.com', 'message' => 'Hi', 'interest' => 'Loans'])
+        $this->post('/contact', ['name' => 'Bob', 'email' => 'b@x.com', 'message' => 'Hi', 'interest' => 'Home loan'])
             ->assertSessionHas('success');
         $this->assertDatabaseHas('messages', ['email' => 'b@x.com']);
     }
