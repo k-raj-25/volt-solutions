@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', config('site.name').' – '.config('site.tagline'))</title>
-    <meta name="description" content="@yield('description', 'Volt Solutions offers bridge, instant and secured funding for business loans and home loans, Pan India with no CIBIL score needed, plus real estate services, from Gurugram.')">
+    <meta name="description" content="@yield('description', 'Volt Solutions offers bridge, instant and secured funding for business loans and home loans, Pan India with no CIBIL score needed, from Gurugram.')">
     <meta property="og:title" content="@yield('title', config('site.name'))">
-    <meta property="og:description" content="@yield('description', 'Business funding and real estate services in Gurugram.')">
+    <meta property="og:description" content="@yield('description', 'Business loans and home loans, Pan India, from Volt Solutions in Gurugram.')">
     <meta property="og:image" content="@yield('og_image', asset('images/logo.png'))">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta name="theme-color" content="#f6f3ec">
@@ -22,7 +22,7 @@
 @php
     $links = [
         ['home', 'Home'], ['about', 'About'], ['loans', 'Loans'],
-        ['real-estate', 'Real Estate'], ['blog.index', 'Blog'], ['careers', 'Careers'],
+        ['blog.index', 'Blog'], ['careers', 'Careers'],
     ];
 @endphp
 <header class="site-header">
@@ -50,7 +50,7 @@
         <div class="footer-grid">
             <div>
                 <a class="footer-logo" href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Volt Solutions"></a>
-                <p>Business funding and real estate guidance from Gurugram, built on transparency and long-term relationships.</p>
+                <p>Business loans and home loans from Gurugram, Pan India, built on transparency and long-term relationships.</p>
             </div>
             <div>
                 <h4>Company</h4>
@@ -65,7 +65,6 @@
                 <h4>What We Do</h4>
                 <ul>
                     <li><a href="{{ route('loans') }}">Business Funding</a></li>
-                    <li><a href="{{ route('real-estate') }}">Real Estate</a></li>
                     <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
                     <li><a href="{{ route('terms') }}">Terms &amp; Conditions</a></li>
                     <li><a href="{{ route('sitemap') }}">Sitemap</a></li>
@@ -80,7 +79,7 @@
                 </ul>
             </div>
         </div>
-        <p class="disclaimer">Funding is subject to eligibility, documentation and credit assessment. Rates, fees and terms may vary. Property information is indicative and should be independently verified before any transaction.</p>
+        <p class="disclaimer">Funding is subject to eligibility, documentation and credit assessment. Rates, fees and terms may vary.</p>
         <div class="footer-bottom">
             <span>&copy; {{ date('Y') }} {{ config('site.name') }}. All rights reserved.</span>
             <span>Developed By <a href="https://www.linkedin.com/in/kr25">Kamal Rajput</a></span>

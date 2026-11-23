@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Us – Volt Solutions')
-@section('description', 'Contact Volt Solutions at IFC Tower, Sector 66, Gurugram for business funding or real estate enquiries.')
+@section('description', 'Contact Volt Solutions at IFC Tower, Sector 66, Gurugram for business loan and home loan enquiries.')
 
 @section('content')
 <section class="contact-page">
@@ -9,7 +9,7 @@
         <div class="contact-intro">
             <div class="breadcrumb"><a href="{{ route('home') }}">Home</a> / Contact</div>
             <h1>Say <em>hello.</em></h1>
-            <p class="lead">Need business funding? Looking for a property? Drop us a line and a real person will reply within one working day.</p>
+            <p class="lead">Need a business loan or a home loan? Drop us a line and a real person will reply within one working day.</p>
 
             <div class="contact-lines">
                 @if (config('site.phone'))
@@ -49,9 +49,9 @@
                     <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
                     <div class="interest-pick">
                         <span>I'm interested in</span>
-                        @foreach (['Funding', 'Real Estate', 'Other'] as $opt)
+                        @foreach (['Business loan', 'Home loan', 'Other'] as $opt)
                             <label>
-                                <input type="radio" name="interest" value="{{ $opt }}" @checked(old('interest', request('interest', 'Funding')) === $opt)>
+                                <input type="radio" name="interest" value="{{ $opt }}" @checked(old('interest', request('interest', 'Business loan')) === $opt)>
                                 <b>{{ $opt }}</b>
                             </label>
                         @endforeach

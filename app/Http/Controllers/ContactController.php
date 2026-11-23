@@ -23,7 +23,7 @@ class ContactController extends Controller
             'name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email', 'max:150'],
             'phone' => ['nullable', 'string', 'max:30'],
-            'interest' => ['nullable', 'in:Loans,Real Estate,Other'],
+            'interest' => ['nullable', 'in:Business loan,Home loan,Other'],
             'message' => ['required', 'string', 'max:3000'],
         ]);
 

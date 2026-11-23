@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('title', 'About Us – Volt Solutions')
-@section('description', 'Learn about Volt Solutions: our story, mission and the values behind our funding and real estate services.')
+@section('description', 'Learn about Volt Solutions: our story, mission and the values behind our business loans and home loans.')
 
 @section('content')
 @include('partials.page-hero', [
     'crumb' => 'About',
     'title' => 'About <em>us.</em>',
-    'lead' => 'We help businesses secure fast, clear funding and help families find property with confidence.',
-    'facts' => [['Focus', 'Business funding and real estate'], ['Approach', 'Transparent and personal'], ['Promise', 'Your financial fortress']],
+    'lead' => 'We help businesses and homebuyers secure fast, clear funding, Pan India.',
+    'facts' => [['Focus', 'Business loans and home loans'], ['Approach', 'Transparent and personal'], ['Promise', 'Your financial fortress']],
     'image' => 'city',
     'alt' => 'Aerial view of a busy city',
-    'tag' => 'One team, two services',
+    'tag' => 'Clear terms, no surprises',
 ])
 
 <section class="section">
@@ -19,19 +19,19 @@
         <div>
             <span class="eyebrow">Our Story</span>
             <h2>Built to be your financial fortress</h2>
-            <p>Volt Solutions began with a simple belief: financial decisions should feel safe, not stressful. We saw that business owners often needed both quick funding and a property advisor, and had to deal with separate parties for each.</p>
-            <p>So we brought both together. Today we offer business funding and real estate services under one roof, with a team that takes the time to understand your situation.</p>
+            <p>Volt Solutions began with a simple belief: financial decisions should feel safe, not stressful. We saw that people needing quick funding were often met with slow processes, unclear terms and strict credit score checks.</p>
+            <p>So we built something better. Today we offer bridge, instant and secured funding for business loans and home loans across India, with a team that takes the time to understand your situation.</p>
             <ul class="checklist">
                 <li>Clear, honest advice with no hidden charges</li>
-                <li>One team for both funding and property</li>
-                <li>Support from first enquiry to after-sales</li>
+                <li>No CIBIL score needed</li>
+                <li>Support from first enquiry to disbursal</li>
             </ul>
         </div>
         <div class="panel navy panel-photo" style="--panel-img:url('{{ asset('images/photos/villa-night.jpg') }}')">
             <h3>Our Mission</h3>
-            <p>To make borrowing and property ownership accessible, transparent and secure for every client we serve.</p>
+            <p>To make borrowing accessible, transparent and secure for every client we serve.</p>
             <h3 style="margin-top:24px">Our Vision</h3>
-            <p style="margin-bottom:0">To be the most trusted name in financial and real estate solutions in the communities we serve.</p>
+            <p style="margin-bottom:0">To be the most trusted name in business and home funding in the communities we serve.</p>
         </div>
     </div>
 </section>

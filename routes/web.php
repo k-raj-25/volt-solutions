@@ -11,7 +11,6 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/about', 'about')->name('about');
     Route::get('/loans', 'loans')->name('loans');
-    Route::get('/real-estate', 'realEstate')->name('real-estate');
     Route::get('/careers', 'careers')->name('careers');
     Route::get('/privacy-policy', 'privacy')->name('privacy');
     Route::get('/terms-and-conditions', 'terms')->name('terms');
@@ -19,6 +18,7 @@ Route::controller(PageController::class)->group(function () {
 });
 
 Route::redirect('/services', '/', 301);
+Route::redirect('/real-estate', '/', 301);
 Route::get('/sitemap.xml', SitemapController::class)->name('sitemap.xml');
 
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
