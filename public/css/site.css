@@ -421,3 +421,6 @@ th { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color:
 .ph-photo { position: relative; aspect-ratio: 4/3; border-radius: 32px; background: linear-gradient(to top, rgba(10,31,61,.45), rgba(10,31,61,0) 50%), var(--img) center/cover; box-shadow: var(--shadow); }
 @media (max-width: 1040px) { .ph-layout.has-photo { grid-template-columns: 1fr; gap: 40px; } }
 @media (max-width: 680px) { .ph-facts > * { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Loan tenure tag on product cards */
+.term { display: inline-block; margin: 0 0 14px; padding: 5px 14px; border-radius: 999px; background: var(--gold); color: #fff; font-size: .8rem; font-weight: 600; letter-spacing: .02em; }

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Business Funding – Bridge, Unsecured & Secured | Volt Solutions')
-@section('description', 'Bridge funding up to 30 days, instant unsecured funding for 4 months and secured private funding for 6 months to 5 years. Volt Solutions, Gurugram.')
+@section('title', 'Business & Home Loans – Bridge, Instant & Secured Funding | Volt Solutions')
+@section('description', 'Bridge funding for 7 to 30 days, instant funding for 4 to 6 months and secured funding from 1 year up to 5–10 years. Business and home loans, Pan India, no CIBIL score needed.')
 
 @section('content')
 @include('partials.page-hero', [
     'crumb' => 'Funding',
     'title' => 'Business <em>funding.</em>',
-    'lead' => 'Fast, clear funding for established businesses. Unsecured or secured, short or long, with terms explained upfront.',
-    'facts' => [['Products', 'Bridge, Instant Unsecured, Secured Private'], ['Terms', '30 days to 5 years'], ['Eligibility', 'Business turnover based']],
+    'lead' => 'Fast, clear funding for business loans and home loans, Pan India. No CIBIL score needed, and every term explained upfront.',
+    'facts' => [['Products', 'Bridge, Instant, Secured'], ['Terms', '7 days up to 10 years'], ['For', 'Business and home loans'], ['Coverage', 'Pan India, no CIBIL score needed']],
     'image' => 'coins',
     'alt' => 'Stacks of coins showing financial growth',
     'tag' => 'Clear terms, no surprises',
@@ -21,10 +21,11 @@
             <h2>Choose the funding that fits</h2>
         </div>
         <div class="grid-3">
-            <div class="card"><div class="icon gold"><x-icon name="clock" /></div><h3>Bridge Funding</h3><p>An unsecured business loan for up to 30 days, to bridge a short gap in cash flow.</p></div>
-            <div class="card"><div class="icon gold"><x-icon name="cash" /></div><h3>Instant Unsecured Funding</h3><p>An unsecured business loan for 4 months. No collateral to arrange.</p></div>
-            <div class="card"><div class="icon gold"><x-icon name="shield" /></div><h3>Secured Private Funding</h3><p>Private funding against security, for 6 months to 5 years.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="clock" /></div><span class="term">7 to 30 days</span><h3>Bridge Funding</h3><p>Short-term funding to cover a gap in cash flow, for 7 to 30 days.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="cash" /></div><span class="term">4 to 6 months</span><h3>Instant Funding</h3><p>Quick unsecured funding for 4 to 6 months, with no collateral to arrange.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="shield" /></div><span class="term">1 year up to 5–10 years</span><h3>Secured Funding</h3><p>Larger funding against security, from 1 year up to 5–10 years.</p></div>
         </div>
+        <div style="margin-top:20px">@include('partials.funding-highlights')</div>
     </div>
 </section>
 
@@ -33,7 +34,7 @@
         <div class="section-head">
             <span class="eyebrow">Eligibility</span>
             <h2>Who can apply</h2>
-            <p class="lead">Our funding is for established businesses. The minimum turnover depends on where your business is based.</p>
+            <p class="lead">For business loans, the minimum turnover depends on where your business is based.</p>
         </div>
         <div class="grid-2">
             <div class="card"><div class="icon gold"><x-icon name="pin" /></div><h3>Delhi NCR</h3><p><strong>Turnover of {{ config('site.currency') }}2 crore</strong> or more.</p></div>
@@ -81,7 +82,10 @@
             <h2>Common questions</h2>
         </div>
         <div class="faq">
-            <details><summary>What is the difference between the three products?</summary><p>Bridge funding is an unsecured business loan for up to 30 days. Instant unsecured funding is an unsecured business loan for 4 months. Secured private funding is backed by security and runs from 6 months to 5 years.</p></details>
+            <details><summary>What is the difference between the three products?</summary><p>Bridge funding is short-term funding for 7 to 30 days. Instant funding is unsecured and runs for 4 to 6 months. Secured funding is backed by security and runs from 1 year up to 5–10 years.</p></details>
+            <details><summary>Do I need a CIBIL score?</summary><p>No. A CIBIL score is not needed to apply.</p></details>
+            <details><summary>Do you lend outside Delhi NCR?</summary><p>Yes. We fund business loans and home loans Pan India.</p></details>
+            <details><summary>Can I get a home loan, or only a business loan?</summary><p>Both. We offer business loans and home loans.</p></details>
             <details><summary>What turnover do I need?</summary><p>A business turnover of {{ config('site.currency') }}2 crore or more if you are in Delhi NCR, and {{ config('site.currency') }}100 crore or more if you are outside Delhi NCR.</p></details>
             <details><summary>What documents do I need?</summary><p>Typically business and KYC documents, financial statements and recent bank statements. Our team will confirm the exact list for your case.</p></details>
             <details><summary>Are there any hidden charges?</summary><p>No. We explain fees and other charges upfront, before you commit.</p></details>

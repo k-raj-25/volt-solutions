@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Volt Solutions – Business Funding & Real Estate, Gurugram | Your Financial Fortress')
-@section('description', 'Bridge funding, instant unsecured funding and secured private funding for businesses, plus real estate services, from Volt Solutions in Gurugram.')
+@section('description', 'Bridge, instant and secured funding for business loans and home loans, Pan India, with no CIBIL score needed. Plus real estate services from Volt Solutions, Gurugram.')
 
 @section('content')
 <section class="hero">
@@ -9,7 +9,7 @@
         <div class="hero-top">
             <h1>Business funding, <em>done fast.</em></h1>
             <div>
-                <p class="lead">Bridge, instant unsecured and secured private funding for established businesses, plus real estate advice, from one team in Gurugram.</p>
+                <p class="lead">Bridge, instant and secured funding for business and home loans, Pan India, with no CIBIL score needed. Plus real estate advice, from one team in Gurugram.</p>
                 <div class="actions">
                     <a href="{{ route('loans') }}" class="btn btn-primary">Explore funding</a>
                     <a href="{{ route('real-estate') }}" class="btn btn-outline">View real estate</a>
@@ -19,16 +19,16 @@
         <div class="hero-banner">
             <img src="{{ asset('images/photos/villa-night.jpg') }}" alt="Elegant home lit at dusk">
             <div class="float-stats">
-                <div class="float-stat"><strong>30 days</strong><span>Bridge funding</span></div>
-                <div class="float-stat"><strong>4 months</strong><span>Instant unsecured</span></div>
-                <div class="float-stat"><strong>5 years</strong><span>Secured, up to</span></div>
+                <div class="float-stat"><strong>7–30 days</strong><span>Bridge funding</span></div>
+                <div class="float-stat"><strong>4–6 months</strong><span>Instant funding</span></div>
+                <div class="float-stat"><strong>1–10 years</strong><span>Secured funding</span></div>
             </div>
         </div>
     </div>
     <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
             @for ($i = 0; $i < 2; $i++)
-                <span>Bridge funding</span><span>Instant unsecured funding</span><span>Secured private funding</span><span>Buy property</span><span>Sell property</span><span>Rentals</span><span>Commercial space</span>
+                <span>Bridge funding</span><span>Instant funding</span><span>Secured funding</span><span>No CIBIL score needed</span><span>Pan India</span><span>Business loans</span><span>Home loans</span><span>Buy property</span><span>Sell property</span><span>Rentals</span><span>Commercial space</span>
             @endfor
         </div>
     </div>
@@ -45,7 +45,7 @@
                 <img src="{{ asset('images/photos/coins.jpg') }}" alt="Stacks of coins showing financial growth" loading="lazy">
                 <span class="pill">Business funding</span>
                 <h3>Funding that fits your plans.</h3>
-                <p>Bridge, instant unsecured and secured private funding for businesses, with clear terms and a real person beside you.</p>
+                <p>Bridge, instant and secured funding for business and home loans, Pan India, with no CIBIL score needed.</p>
                 <a class="btn" href="{{ route('loans') }}">Explore funding</a>
             </article>
             <article class="tile tile-b">
@@ -66,10 +66,11 @@
             <h2>Funding built around your business</h2>
         </div>
         <div class="grid-3">
-            <div class="card"><div class="icon gold"><x-icon name="clock" /></div><h3>Bridge Funding</h3><p>An unsecured business loan for up to 30 days, to cover short gaps in cash flow.</p></div>
-            <div class="card"><div class="icon gold"><x-icon name="cash" /></div><h3>Instant Unsecured Funding</h3><p>An unsecured business loan for 4 months, with no collateral to arrange.</p></div>
-            <div class="card"><div class="icon gold"><x-icon name="shield" /></div><h3>Secured Private Funding</h3><p>Larger funding against security, for 6 months to 5 years.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="clock" /></div><span class="term">7 to 30 days</span><h3>Bridge Funding</h3><p>Short-term funding to cover a gap in cash flow, for 7 to 30 days.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="cash" /></div><span class="term">4 to 6 months</span><h3>Instant Funding</h3><p>Quick unsecured funding for 4 to 6 months, with no collateral to arrange.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="shield" /></div><span class="term">1 year up to 5–10 years</span><h3>Secured Funding</h3><p>Larger funding against security, from 1 year up to 5–10 years.</p></div>
         </div>
+        <div style="margin-top:20px">@include('partials.funding-highlights')</div>
         <p style="margin-top:36px"><a class="btn btn-primary" href="{{ route('loans') }}">See funding details</a></p>
     </div>
 </section>
