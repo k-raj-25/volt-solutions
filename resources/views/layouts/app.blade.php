@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', config('site.name').' – '.config('site.tagline'))</title>
-    <meta name="description" content="@yield('description', 'Volt Solutions offers bridge funding, instant unsecured funding and secured private funding for businesses, plus real estate services, from Gurugram.')">
+    <meta name="description" content="@yield('description', 'Volt Solutions offers bridge, instant and secured funding for business loans and home loans, Pan India with no CIBIL score needed, plus real estate services, from Gurugram.')">
     <meta property="og:title" content="@yield('title', config('site.name'))">
     <meta property="og:description" content="@yield('description', 'Business funding and real estate services in Gurugram.')">
     <meta property="og:image" content="@yield('og_image', asset('images/logo.png'))">
