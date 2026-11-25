@@ -33,7 +33,7 @@ class SiteTest extends TestCase
         foreach (['/', '/loans'] as $url) {
             $this->get($url)->assertOk()
                 ->assertSee('7 to 30 days')->assertSee('4 to 6 months')->assertSee('1 year up to 5–10 years')
-                ->assertSee('No CIBIL score needed')->assertSee('Pan India')
+                ->assertSee('No CIBIL for private funding')->assertSee('Pan India')
                 ->assertSee('Business loans')->assertSee('Home loans');
         }
     }
