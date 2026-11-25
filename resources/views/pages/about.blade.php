@@ -23,7 +23,7 @@
             <p>So we built something better. Today we offer bridge, instant and secured funding for business loans and home loans across India, with a team that takes the time to understand your situation.</p>
             <ul class="checklist">
                 <li>Clear, honest advice with no hidden charges</li>
-                <li>No CIBIL score needed</li>
+                <li>No CIBIL score needed for bridge, instant, secured and private funding</li>
                 <li>Support from first enquiry to disbursal</li>
             </ul>
         </div>

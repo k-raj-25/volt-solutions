@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Volt Solutions – Business Loans & Home Loans, Pan India | Your Financial Fortress')
-@section('description', 'Bridge, instant and secured funding for business loans and home loans, Pan India, with no CIBIL score needed. From Volt Solutions, Gurugram.')
+@section('description', 'Bridge, instant, secured and private funding with no CIBIL score needed, plus bank and NBFC business loans and home loans. Pan India, from Volt Solutions, Gurugram.')
 
 @section('content')
 <section class="hero">
@@ -9,7 +9,7 @@
         <div class="hero-top">
             <h1>Business funding, <em>done fast.</em></h1>
             <div>
-                <p class="lead">Bridge, instant and secured funding for business and home loans, Pan India, with no CIBIL score needed. From one team in Gurugram.</p>
+                <p class="lead">Bridge, instant, secured and private funding with no CIBIL score needed, plus bank and NBFC business and home loans. Pan India, from one team in Gurugram.</p>
                 <div class="actions">
                     <a href="{{ route('loans') }}" class="btn btn-primary">Explore funding</a>
                     <a href="{{ route('contact') }}" class="btn btn-outline">Talk to us</a>
@@ -28,7 +28,7 @@
     <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
             @for ($i = 0; $i < 2; $i++)
-                <span>Bridge funding</span><span>Instant funding</span><span>Secured funding</span><span>No CIBIL score needed</span><span>Pan India</span><span>Business loans</span><span>Home loans</span>
+                <span>Bridge funding</span><span>Instant funding</span><span>Secured funding</span><span>No CIBIL for private funding</span><span>Pan India</span><span>Business loans</span><span>Home loans</span>
             @endfor
         </div>
     </div>
@@ -45,14 +45,14 @@
                 <img src="{{ asset('images/photos/coins.jpg') }}" alt="Stacks of coins showing financial growth" loading="lazy">
                 <span class="pill">Business loans</span>
                 <h3>Funding that fits your plans.</h3>
-                <p>Bridge, instant and secured funding for your business, Pan India, with no CIBIL score needed.</p>
+                <p>Bridge, instant, secured and private funding with no CIBIL score needed, or a bank or NBFC business loan. Pan India.</p>
                 <a class="btn" href="{{ route('loans') }}">Explore funding</a>
             </article>
             <article class="tile tile-b">
                 <img src="{{ asset('images/photos/keys.jpg') }}" alt="Handing over the keys to a new home" loading="lazy">
                 <span class="pill">Home loans</span>
                 <h3>Get the keys sooner.</h3>
-                <p>Funding for your home, with clear terms and no CIBIL score needed.</p>
+                <p>Home loans through banks and NBFCs, with clear terms. A CIBIL score is needed.</p>
                 <a class="btn" href="{{ route('loans') }}">Explore home loans</a>
             </article>
         </div>
@@ -79,14 +79,14 @@
     <div class="container split">
         <div class="photo-stack">
             <img class="photo" src="{{ asset('images/photos/houses.jpg') }}" alt="Modern apartment buildings in warm sunlight" loading="lazy">
-            <div class="photo-badge"><strong>No CIBIL score needed</strong><span>Pan India</span></div>
+            <div class="photo-badge"><strong>No CIBIL for private funding</strong><span>Pan India</span></div>
         </div>
         <div>
             <span class="eyebrow">Your partner</span>
             <h2>Funding with a real person beside you.</h2>
             <p class="lead">One dedicated advisor takes you from first call to disbursal, for business loans and home loans alike.</p>
             <ul class="checklist">
-                <li>Eligibility checked quickly, with no CIBIL score needed</li>
+                <li>Eligibility checked quickly, with no CIBIL score needed for private funding</li>
                 <li>Help preparing your documents</li>
                 <li>One point of contact from enquiry to disbursal</li>
             </ul>

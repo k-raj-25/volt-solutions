@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('title', 'Business & Home Loans – Bridge, Instant & Secured Funding | Volt Solutions')
-@section('description', 'Bridge funding for 7 to 30 days, instant funding for 4 to 6 months and secured funding from 1 year up to 5–10 years. Business and home loans, Pan India, no CIBIL score needed.')
+@section('description', 'Bridge funding for 7 to 30 days, instant funding for 4 to 6 months and secured funding from 1 year up to 5–10 years. No CIBIL score needed for these; bank and NBFC business and home loans need one. Pan India.')
 
 @section('content')
 @include('partials.page-hero', [
     'crumb' => 'Funding',
     'title' => 'Business <em>funding.</em>',
-    'lead' => 'Fast, clear funding for business loans and home loans, Pan India. No CIBIL score needed, and every term explained upfront.',
-    'facts' => [['Products', 'Bridge, Instant, Secured'], ['Terms', '7 days up to 10 years'], ['For', 'Business and home loans'], ['Coverage', 'Pan India, no CIBIL score needed']],
+    'lead' => 'Fast, clear funding for business loans and home loans, Pan India. No CIBIL score needed for bridge, instant, secured or private funding, and every term explained upfront.',
+    'facts' => [['Products', 'Bridge, Instant, Secured'], ['Terms', '7 days up to 10 years'], ['For', 'Business and home loans'], ['Coverage', 'Pan India'], ['CIBIL', 'Only for bank and NBFC loans']],
     'image' => 'coins',
     'alt' => 'Stacks of coins showing financial growth',
     'tag' => 'Clear terms, no surprises',
@@ -39,6 +39,13 @@
         <div class="grid-2">
             <div class="card"><div class="icon gold"><x-icon name="pin" /></div><h3>Delhi NCR</h3><p><strong>Turnover of {{ config('site.currency') }}2 crore</strong> or more.</p></div>
             <div class="card"><div class="icon gold"><x-icon name="building" /></div><h3>Outside Delhi NCR</h3><p><strong>Turnover of {{ config('site.currency') }}100 crore</strong> or more.</p></div>
+        </div>
+        <div class="section-head" style="margin-top:56px">
+            <h2>When a CIBIL score is needed</h2>
+        </div>
+        <div class="grid-2">
+            <div class="card"><div class="icon gold"><x-icon name="building" /></div><h3>CIBIL score needed</h3><p><strong>Business loans and home loans</strong> through banks and NBFCs.</p></div>
+            <div class="card"><div class="icon gold"><x-icon name="shield" /></div><h3>No CIBIL score needed</h3><p><strong>Bridge, instant, secured and private funding.</strong></p></div>
         </div>
     </div>
 </section>
@@ -83,7 +90,7 @@
         </div>
         <div class="faq">
             <details><summary>What is the difference between the three products?</summary><p>Bridge funding is short-term funding for 7 to 30 days. Instant funding is unsecured and runs for 4 to 6 months. Secured funding is backed by security and runs from 1 year up to 5–10 years.</p></details>
-            <details><summary>Do I need a CIBIL score?</summary><p>No. A CIBIL score is not needed to apply.</p></details>
+            <details><summary>Do I need a CIBIL score?</summary><p>It depends on the product. Business loans and home loans through banks and NBFCs need a CIBIL score. Bridge, instant, secured and private funding do not.</p></details>
             <details><summary>Do you lend outside Delhi NCR?</summary><p>Yes. We fund business loans and home loans Pan India.</p></details>
             <details><summary>Can I get a home loan, or only a business loan?</summary><p>Both. We offer business loans and home loans.</p></details>
             <details><summary>What turnover do I need?</summary><p>A business turnover of {{ config('site.currency') }}2 crore or more if you are in Delhi NCR, and {{ config('site.currency') }}100 crore or more if you are outside Delhi NCR.</p></details>
